@@ -38,6 +38,22 @@
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }
+      /* Custom author links */
+      .youtube-button {
+        @include clickable($text-color-1, $youtube-color);
+      }
+      .twitch-button {
+        @include clickable($text-color-1, $twitch-color);
+      }
+      .discord-button {
+        @include clickable($text-color-1, $discord-color);
+      }
+      .patreon-button {
+        @include clickable($text-color-1, $patreon-color);
+      }
+      .tip-button {
+        @include clickable($text-color-1, $tip-color);
+      }
     }
   }
 }

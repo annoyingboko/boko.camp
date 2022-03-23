@@ -18,6 +18,52 @@
       {%- include snippets/get-locale-string.html key='FOLLOW_ME' -%}
       {%- assign _locale_string_follow = __return -%}
     {%- endif -%}
+    {%- include snippets/get-locale-string.html key='SUB' -%}
+    {%- assign _locale_string_sub = __return -%}
+
+    <!-- Custom author links -->
+
+    {%- if _author.youtube -%}
+      <li title="{{ _locale_string_sub | replace: '[NAME]', 'YouTube' }}">
+        <a class="button button--circle youtube-button" itemprop="sameAs" href="{{ _author.youtube }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/youtube.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if _author.twitch -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Twitch' }}">
+        <a class="button button--circle twitch-button" itemprop="sameAs" href="{{ _author.twitch }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/twitch.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if _author.discord -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Discord' }}">
+        <a class="button button--circle discord-button" itemprop="sameAs" href="{{ _author.discord }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/discord.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if _author.patreon -%}
+      <li title="Become a Patron.">
+        <a class="button button--circle patreon-button" itemprop="sameAs" href="{{ _author.patreon }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/patreon.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if _author.tip -%}
+      <li title="Tip Me.">
+        <a class="button button--circle tip-button" itemprop="sameAs" href="{{ _author.tip }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/tip.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    <!-- Regular author links -->
 
     {%- include snippets/get-locale-string.html key='EMAIL_ME' -%}
     {%- if _author.email -%}
