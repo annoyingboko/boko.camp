@@ -40,17 +40,17 @@ author:
   avatar    : /assets/images/boko_icon.png # path or url of avatar image (square)
   bio       : Lover of all things computer related (but only when they work ffs)
   email     : boko@boko.camp
-  youtube   : channel
-  twitch    : live
-  discord   : server
-  patreon   : patreon
-  tip       : tip
+  youtube   : https://boko.camp/channel
+  twitch    : https://boko.camp/live
+  discord   : https://boko.camp/server
+  patreon   : https://boko.camp/patreon
+  tip       : https://boko.camp/tip
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
-repository_tree: master
+repository:
+repository_tree:
 
 
 ## => Paths
@@ -202,11 +202,11 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
 
 
