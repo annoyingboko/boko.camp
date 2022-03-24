@@ -27,11 +27,28 @@
 
   {%- for _article in _sorted_list -%}
 
+    {%- assign _tags = '' -%}
+    {%- for _tag in _article.tags -%}
+      {%- assign _tag_encode = _tag | strip | url_encode -%}
+      {%- if forloop.last -%}
+        {%- assign _tags = _tags | append: _tag_encode -%}
+      {%- else -%}
+        {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
+      {%- endif -%}
+    {%- endfor -%}
+
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
     {%- assign _article_url = __return -%}
 
-    {%- if _article.cover -%}
-      {%- include snippets/get-nav-url.html path=_article.cover -%}
+    {%- if _article.cover or _article.vid -%}
+      {%- if _article.vid -%}
+        {%- capture _cov -%}
+        https://img.youtube.com/vi/{{ _article.vid }}/maxresdefault.jpg
+        {%- endcapture -%}
+      {%- else -%}
+        {%- assign _cov = _article.cover -%}
+      {%- endif -%}
+      {%- include snippets/get-nav-url.html path=_cov -%}
       {%- assign _article_cover = __return -%}
     {%- endif -%}
 
@@ -41,7 +58,7 @@
       {%- else -%}
         <article class="item">
       {%- endif -%}
-        {%- if _article.cover and include.show_cover-%}
+        {%- if include.show_cover and _article.cover or _article.vid -%}
           {%- include snippets/get-nav-url.html path=_article.cover -%}
           {%- assign _article_cover = __return -%}
           <div class="item__image">
@@ -81,15 +98,6 @@
 
 
     {%- elsif include.type == 'brief' -%}
-      {%- assign _tags = '' -%}
-      {%- for _tag in _article.tags -%}
-        {%- assign _tag_encode = _tag | strip | url_encode -%}
-        {%- if forloop.last -%}
-          {%- assign _tags = _tags | append: _tag_encode -%}
-        {%- else -%}
-          {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
-        {%- endif -%}
-      {%- endfor -%}
       {%- if include.group_by == 'year' -%}
         {%- assign _currentdate = _article.date | date: '%Y' -%}
         {%- if _currentdate != _date -%}
@@ -108,36 +116,43 @@
       </li>
 
     {%- elsif include.type == 'grid' -%}
+
       {%- if include.size == 'sm' -%}
-        <div class="cell cell--12 cell--md-4 cell--lg-3">
-          <div class="card card--flat">
-            {%- if _article.cover -%}
-              <div class="card__image">
-                <img class="image" src="{{ _article_cover }}" />
-                <div class="overlay overlay--bottom">
+        <section class="cell cell--12 cell--md-4 cell--lg-3">
+          <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+            <div class="card card--flat">
+              {%- if _article.cover or _article.vid -%}
+                <div class="card__image">
+                  <img class="image" src="{{ _article_cover }}" />
+                  <div class="overlay overlay--bottom">
+                    <header>
+                      <a href="{{ _article_url }}"><h5 class="card__header">{{ _article.title }}</h5></a>
+                    </header>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </li>
+        </section>
+
+      {%- else -%}
+        <section class="cell cell--12 cell--md-4 cell--lg-3">
+          <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+            <div class="card card--flat">
+              {%- if _article.cover or _article.vid -%}
+                <div class="card__image"><img src="{{ _article_cover }}" /></div>
+              {%- endif -%}
+                <div class="card__content">
                   <header>
-                    <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
+                    <a href="{{ _article_url }}"><h5 class="card__header">{{ _article.title }}</h5></a>
                   </header>
                 </div>
-              </div>
-            {%- endif -%}
             </div>
-        </div>
-      {%- else -%}
+          </li>
+        </section>
 
-        <div class="cell cell--12 cell--md-6 cell--lg-4">
-          <div class="card card--flat">
-            {%- if _article.cover -%}
-              <div class="card__image"><img src="{{ _article_cover }}" /></div>
-            {%- endif -%}
-              <div class="card__content">
-                <header>
-                  <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
-                </header>
-              </div>
-          </div>
-        </div>
       {%- endif -%}
+
     {%- endif -%}
   {%- endfor -%}
 

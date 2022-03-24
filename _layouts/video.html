@@ -1,0 +1,13 @@
+---
+layout: article
+---
+
+{%- assign _video_id = page.vid -%}
+
+<div class="layout--video">
+
+  <div>{%- include extensions/youtube.html id=_video_id -%}</div>
+
+  <div class="article__content" itemprop="articleBody">{{ content }}</div>
+
+</div>

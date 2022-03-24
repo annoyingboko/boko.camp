@@ -1,4 +1,7 @@
 header:
+  - title: Videos
+    url: /videos
+    
   - title: Archive
     url: /archive
 
