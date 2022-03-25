@@ -1,0 +1,40 @@
+---
+layout: article
+show_title: false
+full_width: true
+align: center
+header: false
+footer: false
+---
+
+{%- assign _author = page.author | default: site.author -%}
+
+<style>
+  .content--list-center {
+    text-align: center;
+    padding-bottom: 1cm;
+    display: inline-block;
+  }
+  ul {
+    display: table;
+    text-align: left;
+  }
+</style>
+
+<div class="hero hero--center hero--dark hero--fill-height">
+  <div class="hero__content">
+    <img class="author-profile__avatar_big" src="{{ _author.avatar }}" />
+    <h3>{{ _author.name }}</h3>
+    <p>{{ _author.bio }}</p>
+
+    <div class="content--list-center">
+    {{ content }}
+    </div>
+
+    <div class="author-profile__links">
+      {%- include author-links.html author=_author -%}
+    </div>
+    <br/>
+    <a class="button button--secondary button--pill" onclick="history.back()">Go Back</a>
+  </div>
+</div>

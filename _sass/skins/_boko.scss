@@ -4,19 +4,20 @@
 
 // main colors
 $main-color-1:     #C31F6C;
-$text-color-1:     #fff;
+$text-color-1:     #FBF1F5;
 
 $main-color-2:     #1FC33D;
-$text-color-2:     #fff;
+$text-color-2:     #F0F9F3;
 
-$main-color-3:     #A998EA;
-$text-color-3:     #fff;
+$main-color-3:     #262DBCAA;
+$text-color-3:     #F4F2FF;
 
 $main-color-theme-light: rgba(#000, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
 
 // page background
-$background-color: #f8fcfb;
+$background-color: #A998EA;
+$background-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(96, 48, 0, 0.6));
 
 // text colors
 $text-color-theme-light-d: #325f74;
@@ -27,9 +28,9 @@ $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
 $text-color-theme-dark-l:  rgba(#fff, .85);
 
-$text-color-d:     $text-color-theme-light-d;
-$text-color:       $text-color-theme-light;
-$text-color-l:     $text-color-theme-light-l;
+$text-color-d:     $text-color-theme-dark-d;
+$text-color:       $text-color-theme-dark;
+$text-color-l:     $text-color-theme-dark-l;
 
 $text-background-color: rgba(#000, .05);
 
@@ -74,4 +75,4 @@ $patreon-color:    #FF424D;
 $tip-color:        #FC28B4;
 
 // highlight colors
-@import "skins/highlight/tomorrow";
+@import "skins/highlight/tomorrow-night-eighties";

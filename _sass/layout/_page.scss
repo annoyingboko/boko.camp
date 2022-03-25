@@ -3,6 +3,7 @@ html,
 .root,
 .layout--page {
   height: 100%;
+  @extend .text--dark;
 }
 
 .layout--page {
@@ -38,11 +39,24 @@ html,
   @include flex-direction(column);
   min-height: 100%;
   background-color: $background-color;
+  background-image: url("/assets/white.png");
+  background-size: 100%;
+  background-attachment: fixed;
+  transition: background-image 0.5s linear;
+  transition-delay: 0.5s;
+}
+
+.page__main-inner-overlay {
+  background-image: $background-gradient;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+ -webkit-backdrop-filter: blur(2px);
 }
 
 .page__content {
   @include flex(1);
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   @media print {
     padding-bottom: 0;

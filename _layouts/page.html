@@ -67,7 +67,20 @@ layout: base
     {%- endif -%}
     <div class="{{ _page_main_class }} cell cell--auto">
 
-      <div class="page__main-inner">
+      <div class="page__main-inner" id="page__main-inner">
+      {%- if _page_type == 'article' -%}
+        {%- if page.vid -%}
+          {%- capture _bg_img -%}
+          https://img.youtube.com/vi/{{ page.vid }}/maxresdefault.jpg
+          {%- endcapture -%}
+        {%- else -%}
+          {%- assign _bg_img = page.cover -%}
+        {%- endif -%}
+        <div class="page__main-inner-overlay" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
+      {%- else -%}
+        <div class="page__main-inner-overlay">
+      {%- endif -%}
+
       {%- if _header != false -%}
         <div class="page__header d-print-none">
         {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
@@ -227,6 +240,7 @@ layout: base
           <div class="page__footer d-print-none">{%- include footer.html -%}</div>
         {%- endif -%}
       </div>
+      </div>
     </div> {%- comment -%} end page__main {%- endcomment -%}
 {%- if page.sidebar -%}
     </div> {%- comment -%} end grid {%- endcomment -%}
@@ -243,6 +257,32 @@ layout: base
 </div>
 
 
+<script>
+  (function() {
+    var BACKGROUND_IMAGE = '{{ _bg_img }}';
+    window.BACKGROUND_IMAGE = BACKGROUND_IMAGE;
+  })();
+  function bgRandom()
+  {
+    <!-- TODO: Make the photos array dynamic -->
+    var photos = ["/assets/images/photos/games/horizon/forbidden-west/las vegas.jpg", "/assets/images/photos/games/horizon/zero-dawn/Horizon Zero Dawn_Tue_Jun__1_22-50-20_2021.png"]
+    var img = "url('" + photos[Math.floor(Math.random() * 2)] + "')";
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundImage = img;
+  }
+  function bgSet()
+  {
+    var img = "url('" + window.BACKGROUND_IMAGE + "')";
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundImage = img;
+  }
+
+  {%- if _page_type != 'article' -%}
+    window.onload = bgRandom;
+  {%- else -%}
+    window.onload = bgSet;
+  {%- endif -%}
+</script>
 <script>
   {%- include scripts/lib/scroll-to.js -%}
   {%- include scripts/lib/affix.js -%}

@@ -4,6 +4,7 @@ vid: udeHM4HlyN4
 title: Skyward Sword, a Plot Summary
 tags: Video Gaming Zelda
 category: videos
+aside: false
 ---
 
 A video I made describing the plot of Skyward Sword from a more ~~unfunny~~ *'humorous'* view, coming from having played the game a ton for basically 10 years leading up to then.

@@ -39,6 +39,12 @@
   }
 }
 
+.hero--fill-height {
+  min-height: 100vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
 .hero--light {
   @extend .text--light;
 }
