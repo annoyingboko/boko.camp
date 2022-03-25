@@ -76,7 +76,11 @@ layout: base
         {%- else -%}
           {%- assign _bg_img = page.cover -%}
         {%- endif -%}
-        <div class="page__main-inner-overlay" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
+        {%- if page.noblur -%}
+          <div class="page__main-inner-overlay">
+        {%- else -%}
+          <div class="page__main-inner-overlay" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
+        {%- endif -%}
       {%- else -%}
         <div class="page__main-inner-overlay">
       {%- endif -%}
