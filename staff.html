@@ -1,0 +1,49 @@
+---
+layout: article
+header: false
+footer: false
+cover: assets/images/galaxy.png
+---
+
+{%- assign _warped = site.data.authors['WarpedGamer'] -%}
+{%- assign _electron = site.data.authors['ElectronDev'] -%}
+{%- assign _champ = site.data.authors['Champion'] -%}
+{%- assign _arsh = site.data.authors['Arsh'] -%}
+
+<style>
+  .author-profile__size {
+    min-height: 13rem;
+  }
+</style>
+
+<h2>Server Staff</h2>
+
+{%- capture _grid -%}
+<div class="grid-container">
+  <div class="grid grid--px-1">
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=site.author -%}
+    </div></div>
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=_warped -%}
+    </div></div>
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=_electron -%}
+    </div></div>
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=_champ -%}
+    </div></div>
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=_arsh -%}
+    </div></div>
+
+  </div>
+</div>
+{%- endcapture -%}
+
+{{ _grid | replace: 'author-profile ', 'author-profile author-profile__size '  }}

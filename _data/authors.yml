@@ -1,13 +1,33 @@
 Arsh:
   name      : Arsh
+  role      : Imposter
+  url       : arsh
   avatar    : /assets/images/authors/arsh_icon.png
   bio       : worst staff member, will actively make your experience worse
 
 WarpedGamer:
   name      : WarpedGamer
+  role      : Admin
+  url       : warped
   avatar    : /assets/images/authors/warped_icon.gif
   bio       : Blacker than a moonless night, hotter and more bitter than Hell itself... That is coffee
   twitch    : https://www.twitch.tv/warpedgamer
   twitter   : https://twitter.com/WarpedGamer23
   youtube   : https://m.youtube.com/channel/UCgAHL4lVggqHMaY8Us_pXCw
   discord   : https://discord.gg/TmQ6cfzuCR
+
+ElectronDev:
+  name      : ElectronDev
+  role      : Admin
+  url       : electron
+  avatar    : /assets/images/authors/electron_icon.gif
+  bio       : Sticks and Stones against the lightning
+  email     : dev@electrondev.uk
+  site      : https://electrondev.uk
+
+Champion:
+  name      : Champion
+  role      : Moderator
+  url       : champ
+  avatar    : /assets/images/authors/champ_icon.png
+  bio       : I like computers, coding, movies, and gaming (all at the same time)

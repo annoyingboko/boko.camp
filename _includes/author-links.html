@@ -63,6 +63,14 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.site -%}
+      <li title="View Website.">
+        <a class="button button--circle site-button" itemprop="sameAs" href="{{ _author.site }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/site.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     <!-- Regular author links -->
 
     {%- include snippets/get-locale-string.html key='EMAIL_ME' -%}

@@ -54,6 +54,9 @@
       .tip-button {
         @include clickable($text-color-1, $tip-color);
       }
+      .site-button {
+        @include clickable($text-color-1, $site-color);
+      }
     }
   }
 }

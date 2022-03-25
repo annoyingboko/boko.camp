@@ -26,6 +26,10 @@
   a {
     @include link-colors($text-color, $main-color-1);
   }
+  height: 2mm;
+}
+.author-profile__role {
+  padding-left: 10%;
 }
 .author-profile__links {
   @include overflow(auto);

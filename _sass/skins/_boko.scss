@@ -9,7 +9,7 @@ $text-color-1:     #FBF1F5;
 $main-color-2:     #1FC33D;
 $text-color-2:     #F0F9F3;
 
-$main-color-3:     #262DBCAA;
+$main-color-3:     rgba(#262DBC, 0.6);
 $text-color-3:     #F4F2FF;
 
 $main-color-theme-light: rgba(#000, .9);
@@ -32,7 +32,7 @@ $text-color-d:     $text-color-theme-dark-d;
 $text-color:       $text-color-theme-dark;
 $text-color-l:     $text-color-theme-dark-l;
 
-$text-background-color: rgba(#000, .05);
+$text-background-color: rgba(#C31F6C, .5);
 
 // header and footer colors
 $header-text-color: $text-color-3;
@@ -73,6 +73,7 @@ $twitch-color:     #6441a5;
 $discord-color:    #5865F2;
 $patreon-color:    #FF424D;
 $tip-color:        #FC28B4;
+$site-color:       #1FC33D;
 
 // highlight colors
 @import "skins/highlight/tomorrow-night-eighties";

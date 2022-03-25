@@ -36,7 +36,8 @@ timezone: Europe/London # see https://en.wikipedia.org/wiki/List_of_tz_database_
 author:
   type      : # "person" (default), "organization"
   name      : Boko
-  url       :
+  role      : Owner
+  url       : boko
   avatar    : /assets/images/boko_icon.png # path or url of avatar image (square)
   bio       : Lover of all things computer related (but only when they work ffs)
   email     : boko@boko.camp
