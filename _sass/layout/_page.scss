@@ -51,19 +51,26 @@ html,
   background-attachment: fixed;
   backdrop-filter: blur(2px);
  -webkit-backdrop-filter: blur(2px);
+  min-height: 100vh;
 }
 
 .page__content {
   @include flex(1);
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
+  margin-bottom: 10rem;
   @media print {
     padding-bottom: 0;
   }
 }
+.page__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .hide-footer {
   .page__content {
+    margin-bottom: 0;
     padding-bottom: 0;
   }
 }
