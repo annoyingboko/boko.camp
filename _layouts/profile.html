@@ -1,7 +1,6 @@
 ---
 layout: article
 show_title: false
-full_width: true
 header: false
 footer: false
 ---
@@ -22,10 +21,6 @@ footer: false
     display: table;
     text-align: left;
   }
-  .blockquote--center {
-    padding-left: 35%;
-    padding-right: 35%;
-  }
 }
 </style>
 
@@ -34,8 +29,8 @@ footer: false
     <img class="author-profile__avatar_big" src="{{ _author.avatar }}" />
     <h3>{{ _author.name }}</h3>
 
-    <div class="blockquote--center">
-      <blockquote>{{ _author.bio }}</blockquote>
+    <div>
+      <small>{{ _author.bio }}</small>
     </div>
 
     {%- if content != blank -%}
