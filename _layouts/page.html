@@ -89,11 +89,11 @@ layout: base
         <div class="page__header d-print-none">
         {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
         {%- if _header_theme == 'dark'-%}
-          {%- include header.html theme='dark' background=page.header.background -%}
+          {%- include header.html url=page.url theme='dark' background=page.header.background -%}
         {%- elsif _header_theme == 'light' -%}
-          {%- include header.html theme='light' background=page.header.background -%}
+          {%- include header.html url=page.url theme='light' background=page.header.background -%}
         {%- else -%}
-          {%- include header.html -%}
+          {%- include header.html url=page.url -%}
         {%- endif -%}
         </div>
       {%- endif -%}
