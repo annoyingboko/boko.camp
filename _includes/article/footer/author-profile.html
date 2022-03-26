@@ -1,4 +1,5 @@
 {%- assign _author = include.author -%}
+{%- assign _do_role = include.role | default: false -%}
 
 {%- if _author.type == 'organization' -%}
   {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
@@ -38,8 +39,10 @@
           </p>
         {%- endif -%}
 
-        {%- if _author.role -%}
+        {%- if _author.role and _do_role -%}
           <p class="author-profile__role"><i>{{ _author.role }}  </i></p>
+        {%- else -%}
+          <br/>
         {%- endif -%}
       </div>
 
