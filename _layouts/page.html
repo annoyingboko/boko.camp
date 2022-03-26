@@ -211,7 +211,7 @@ layout: base
               <div class="col-main cell cell--auto">
                 {%- include main/top/custom.html -%}
                 {%- if _page_type == 'article' -%}
-                  <article itemscope itemtype="http://schema.org/Article">
+                  <article itemscope itemtype="http://schema.org/Article" class="article-back">
                 {%- elsif _page_type == 'webpage' -%}
                   <article itemscope itemtype="http://schema.org/WebPage">
                 {%- else -%}

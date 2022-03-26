@@ -175,6 +175,17 @@ html,
   }
 }
 
+.article-back {
+    background: $article-background;
+
+    backdrop-filter: brightness(.1);
+   -webkit-backdrop-filter: brightness(.1);
+
+    padding: 15px;
+    padding-top: 0;
+    border-radius: 15px;
+}
+
 .page__main--immersive {
   .page__header {
     position: absolute;
