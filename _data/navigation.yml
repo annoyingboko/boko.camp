@@ -2,11 +2,16 @@ header:
   - title: Home
     url: /
 
-  - title: Videos
-    url: /videos
+  - title: Content
+    children:
 
-  - title: Archive
-    url: /archive
+      - title: Videos
+        url: /videos
+
+      - divider: true
+
+      - title: Archive
+        url: /archive
 
   - title: About
     url: /boko

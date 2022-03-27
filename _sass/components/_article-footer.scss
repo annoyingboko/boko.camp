@@ -5,7 +5,7 @@
 
 .article__license, .article__subscribe {
   a {
-    @include link-colors($text-color, $main-color-1);
+    @include link-colors($text-color, $highlight-color);
   }
 }
 

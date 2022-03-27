@@ -17,7 +17,7 @@
       margin-top: map-get($spacers, 3);
     }
     & > .anchor {
-      @include link-colors($border-color, $main-color-1);
+      @include link-colors($border-color, $highlight-color);
       margin-left: map-get($spacers, 1);
       text-decoration: none;
       visibility: hidden;
