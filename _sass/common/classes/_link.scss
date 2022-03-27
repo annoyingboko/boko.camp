@@ -3,7 +3,8 @@
     text-decoration: none;
   }
   @include hover() {
-    text-decoration: underline;
+    text-decoration: $highlight-decoration;
+    font-style: $highlight-style;
   }
   @include active() {
     text-decoration: none;

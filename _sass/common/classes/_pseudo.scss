@@ -16,6 +16,9 @@
   .root[data-is-touch] &.active,
   .root[data-is-touch] &:active {
     @content;
+    color: $active-color;
+    text-decoration: $active-decoration;
+    font-style: $active-style;
   }
 }
 
