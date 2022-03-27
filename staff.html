@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 header: false
 footer: false
 cover: assets/images/galaxy.png
@@ -10,7 +10,18 @@ cover: assets/images/galaxy.png
 {%- assign _champ = site.data.authors['Champion'] -%}
 {%- assign _arsh = site.data.authors['Arsh'] -%}
 
+{%- assign _authors = site.data.authors -%}
+
 <style>
+  .article-back {
+      background: none;
+
+      backdrop-filter: none;
+     -webkit-backdrop-filter: none;
+
+      padding: 0;
+      border-radius: 0;
+  }
   .author-profile__size {
     min-height: 13rem;
   }
@@ -22,28 +33,47 @@ cover: assets/images/galaxy.png
 <div class="grid-container">
   <div class="grid grid--px-1">
 
-    <div class="cell cell--12 cell--lg-6"><div>
-      {%- include article/footer/author-profile.html author=site.author role=true -%}
-    </div></div>
+    {%- for _author in _authors -%}
 
-    <div class="cell cell--12 cell--lg-6"><div>
-      {%- include article/footer/author-profile.html author=_warped role=true -%}
-    </div></div>
+      {%- assign _author_data = _author[1] -%}
 
-    <div class="cell cell--12 cell--lg-6"><div>
-      {%- include article/footer/author-profile.html author=_electron role=true -%}
-    </div></div>
+      <div> {{_author_data}} </div>
 
-    <div class="cell cell--12 cell--lg-6"><div>
-      {%- include article/footer/author-profile.html author=_champ role=true -%}
-    </div></div>
+      <div class="cell cell--12 cell--lg-6"><div>
+        {%- include article/footer/author-profile.html author=_author_data role=true -%}
+      </div></div>
 
-    <div class="cell cell--12 cell--lg-6"><div>
-      {%- include article/footer/author-profile.html author=_arsh role=true -%}
-    </div></div>
+    {%- endfor -%}
 
   </div>
 </div>
 {%- endcapture -%}
 
 {{ _grid | replace: 'author-profile ', 'author-profile author-profile__size '  }}
+
+<script>
+  (function() {
+    var BACKGROUND_IMAGES = '{{ _bg_img }}';
+    window.BACKGROUND_IMAGES = BACKGROUND_IMAGES;
+  })();
+  function bgRandom()
+  {
+    <!-- TODO: Make the photos array dynamic -->
+    var photos = ["/assets/images/photos/games/horizon/forbidden-west/las vegas.jpg", "/assets/images/photos/games/horizon/zero-dawn/Horizon Zero Dawn_Tue_Jun__1_22-50-20_2021.png"]
+    var img = "url('" + photos[Math.floor(Math.random() * 2)] + "')";
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundImage = img;
+  }
+  function bgSet()
+  {
+    var img = "url('" + window.BACKGROUND_IMAGE + "')";
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundImage = img;
+  }
+
+  {%- if _page_type != 'article' -%}
+    window.onload = bgRandom;
+  {%- else -%}
+    window.onload = bgSet;
+  {%- endif -%}
+</script>
