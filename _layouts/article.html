@@ -13,7 +13,7 @@ type: article
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
-  {%- if _sharing and pagefooter == false -%}
+  {%- if _sharing and page.layout != "profile" -%}
     <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
   {%- endif -%}
 
