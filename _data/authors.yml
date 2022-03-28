@@ -1,15 +1,9 @@
-Arsh:
-  name      : Arsh
-  role      : Imposter
-  url       : arsh
-  avatar    : /assets/images/authors/arsh_icon.png
-  bio       : worst staff member, will actively make your experience worse
-
 WarpedGamer:
   name      : WarpedGamer
   role      : Admin
   url       : warped
   avatar    : /assets/images/authors/warped_icon.gif
+  banner    : /assets/images/authors/warped_banner.gif
   bio       : Blacker than a moonless night, hotter and more bitter than Hell itself... That is coffee
   twitch    : https://www.twitch.tv/warpedgamer
   twitter   : https://twitter.com/WarpedGamer23
@@ -21,6 +15,7 @@ ElectronDev:
   role      : Admin
   url       : electron
   avatar    : /assets/images/authors/electron_icon.gif
+  banner    : /assets/images/authors/electron_banner.png
   bio       : Sticks and Stones against the lightning
   email     : dev@electrondev.uk
   site      : https://electrondev.uk
@@ -30,4 +25,13 @@ Champion:
   role      : Moderator
   url       : champ
   avatar    : /assets/images/authors/champ_icon.png
+  banner    : /assets/images/authors/champ_banner.png
   bio       : I like computers, coding, movies, and gaming (all at the same time)
+
+Arsh:
+  name      : Arsh
+  role      : Imposter
+  url       : arsh
+  avatar    : /assets/images/authors/arsh_icon.png
+  banner    : /assets/images/authors/arsh_banner.png
+  bio       : worst staff member, will actively make your experience worse

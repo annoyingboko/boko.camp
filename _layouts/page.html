@@ -73,6 +73,8 @@ layout: base
           {%- capture _bg_img -%}
           https://img.youtube.com/vi/{{ page.vid }}/maxresdefault.jpg
           {%- endcapture -%}
+        {%- elsif page.layout == "profile" -%}
+          {%- assign _bg_img = site.data.authors[page.author].banner -%}
         {%- else -%}
           {%- assign _bg_img = page.cover -%}
         {%- endif -%}
@@ -268,9 +270,23 @@ layout: base
   })();
   function bgRandom()
   {
-    <!-- TODO: Make the photos array dynamic -->
+    // TODO: Make the photos array dynamic
     var photos = ["/assets/images/photos/games/horizon/forbidden-west/las vegas.jpg", "/assets/images/photos/games/horizon/zero-dawn/Horizon Zero Dawn_Tue_Jun__1_22-50-20_2021.png"]
     var img = "url('" + photos[Math.floor(Math.random() * 2)] + "')";
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundImage = img;
+  }
+  function bgStaff()
+  {
+    // Unlike bgRandom, does not need dynamic photos, as staff rarely change
+    var photos = [
+      "boko_banner.png",
+      "/authors/arsh_banner.png",
+      "/authors/champ_banner.png",
+      "/authors/electron_banner.png",
+      "/authors.warped_banner.png"
+    ]
+    var img = "url('/assets/images/" + photos[Math.floor(Math.random() * photos.length)] + "')";
     var page = document.getElementById("page__main-inner");
     page.style.backgroundImage = img;
   }
@@ -281,10 +297,12 @@ layout: base
     page.style.backgroundImage = img;
   }
 
-  {%- if _page_type != 'article' -%}
-    window.onload = bgRandom;
-  {%- else -%}
+  {%- if _bg_img -%}
     window.onload = bgSet;
+  {%- elsif page.layout == "staff" -%}
+    window.onload = bgStaff;
+  {%- else -%}
+    window.onload = bgRandom;
   {%- endif -%}
 </script>
 <script>

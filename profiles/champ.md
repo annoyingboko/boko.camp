@@ -1,6 +1,5 @@
 ---
 layout: profile
-cover: "/assets/images/authors/champ_banner.png"
 noblur: true
 author: Champion
 permalink: champ

@@ -1,0 +1,49 @@
+---
+layout: article
+header: false
+footer: false
+---
+
+{%- assign _warped = site.data.authors['WarpedGamer'] -%}
+{%- assign _electron = site.data.authors['ElectronDev'] -%}
+{%- assign _champ = site.data.authors['Champion'] -%}
+{%- assign _arsh = site.data.authors['Arsh'] -%}
+
+{%- assign _authors = site.data.authors -%}
+
+<style>
+  .article-back {
+      background: none;
+
+      backdrop-filter: none;
+     -webkit-backdrop-filter: none;
+
+      padding: 0;
+      border-radius: 0;
+  }
+  .author-profile__size {
+    min-height: 13rem;
+  }
+</style>
+
+{{content}}
+
+{%- capture _grid -%}
+<div class="grid-container">
+  <div class="grid grid--px-1">
+
+    <div class="cell cell--12 cell--lg-6"><div>
+      {%- include article/footer/author-profile.html author=site.author role=true -%}
+    </div></div>
+
+    {%- for _author_info in _authors -%}
+      <div class="cell cell--12 cell--lg-6"><div>
+        {%- include article/footer/author-profile.html author=_author_info role=true -%}
+      </div></div>
+    {%- endfor -%}
+
+  </div>
+</div>
+{%- endcapture -%}
+
+{{ _grid | replace: 'author-profile ', 'author-profile author-profile__size '  }}

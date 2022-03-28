@@ -1,5 +1,10 @@
-{%- assign _author = include.author -%}
 {%- assign _do_role = include.role | default: false -%}
+
+{%- if include.author[1] -%}
+  {%- assign _author = include.author[1] -%}
+{%- else -%}
+  {%- assign _author = include.author -%}
+{%- endif -%}
 
 {%- if _author.type == 'organization' -%}
   {%- assign _author_itemtype = 'http://schema.org/Organization' -%}

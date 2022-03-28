@@ -1,6 +1,5 @@
 ---
 layout: profile
-cover: "/assets/images/authors/arsh_banner.png"
 noblur: true
 author: Arsh
 permalink: arsh

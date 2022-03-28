@@ -1,6 +1,5 @@
 ---
 layout: profile
-cover: "/assets/images/photos/games/horizon/forbidden-west/las vegas.jpg"
 noblur: true
 permalink: boko
 ---

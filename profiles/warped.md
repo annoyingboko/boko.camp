@@ -1,6 +1,5 @@
 ---
 layout: profile
-cover: "/assets/images/authors/warped_banner.gif"
 noblur: true
 author: WarpedGamer
 permalink: warped

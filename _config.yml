@@ -39,6 +39,7 @@ author:
   role      : Owner
   url       : boko
   avatar    : /assets/images/boko_icon.png # path or url of avatar image (square)
+  banner    : /assets/images/boko_banner.png
   bio       : Lover of all things computer related (but only when they work ffs)
   github    : annoyingboko
   email     : boko@boko.camp

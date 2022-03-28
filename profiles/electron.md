@@ -1,6 +1,5 @@
 ---
 layout: profile
-cover: "/assets/images/authors/electron_banner.png"
 noblur: true
 author: ElectronDev
 permalink: electron
