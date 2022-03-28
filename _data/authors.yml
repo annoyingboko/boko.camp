@@ -3,7 +3,7 @@ WarpedGamer:
   role      : Admin
   url       : warped
   avatar    : /assets/images/authors/warped_icon.gif
-  banner    : /assets/images/authors/warped_banner.gif
+  banner    : /assets/images/authors/warped_banner.webp
   bio       : Blacker than a moonless night, hotter and more bitter than Hell itself... That is coffee
   twitch    : https://www.twitch.tv/warpedgamer
   twitter   : https://twitter.com/WarpedGamer23
@@ -19,6 +19,29 @@ ElectronDev:
   bio       : Sticks and Stones against the lightning
   email     : dev@electrondev.uk
   site      : https://electrondev.uk
+
+Dash:
+  name      : Dash
+  role      : MIA
+  url       : 404
+  avatar    : https://cdn.discordapp.com/avatars/332343312033906698/d0efd9d1138f7af395c2bebe2001f076.webp
+  bio       : ‍
+  site      : https://thumbs.dreamstime.com/z/missing-person-poster-portrait-format-eps-140110438.jpg
+
+Enderdude:
+  name      : Enderdude
+  role      : Moderator
+  url       : ender
+  avatar    : /assets/images/authors/ender_icon.webp
+  banner    : /assets/images/authors/ender_icon.webp
+
+BlookyBeat:
+  name      : BlookyBeat
+  role      : Moderator
+  url       : blooky
+  avatar    : https://pbs.twimg.com/profile_images/1427661960489754630/QP3g51Nv_400x400.jpg
+  banner    : https://i.ytimg.com/vi/J--nC12W-YI/maxresdefault.jpg
+  bio       : Mr. Business
 
 Champion:
   name      : Champion
