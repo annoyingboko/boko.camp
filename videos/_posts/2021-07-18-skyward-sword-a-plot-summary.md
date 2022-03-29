@@ -4,7 +4,7 @@ vid: udeHM4HlyN4
 title: Skyward Sword, a Plot Summary
 permalink: ss-plot-summary
 tags: Video Gaming Zelda
-category: videos
+categories: videos featured
 aside: false
 ---
 

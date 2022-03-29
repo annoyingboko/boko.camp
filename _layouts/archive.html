@@ -12,7 +12,7 @@ layout: page
 {%- assign _desc = page.description -%}
 
 {%- if page.post_category -%}
-  {%- assign _posts = site.posts | where: "category", page.post_category -%}
+  {%- assign _posts = site.posts | where: "categories", page.post_category -%}
 {%- else -%}
   {%- assign _posts = site.posts -%}
 {%- endif -%}

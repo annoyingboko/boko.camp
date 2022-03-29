@@ -74,7 +74,11 @@ layout: base
           https://img.youtube.com/vi/{{ page.vid }}/maxresdefault.jpg
           {%- endcapture -%}
         {%- elsif page.layout == "profile" -%}
-          {%- assign _bg_img = site.data.authors[page.author].banner -%}
+          {%- if page.author -%}
+            {%- assign _bg_img = site.data.authors[page.author].banner -%}
+          {%- else -%}
+            {%- assign _bg_img = site.author.banner -%}
+          {%- endif -%}
         {%- else -%}
           {%- assign _bg_img = page.cover -%}
         {%- endif -%}
@@ -273,10 +277,9 @@ layout: base
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-            var img = "url('" + "boko.camp/assets/images" + this.responseText; + "')";
-            var page = document.getElementById("page__main-inner");
-            alert(img);
-            page.style.backgroundImage = img;
+        var img = "url('" + "/assets/images" + this.responseText; + "')";
+        var page = document.getElementById("page__main-inner");
+        page.style.backgroundImage = img;
       }
     };
     xmlhttp.open("GET", "https://boko.camp/assets/images/bg.php", true);

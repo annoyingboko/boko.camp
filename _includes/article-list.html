@@ -118,37 +118,47 @@
     {%- elsif include.type == 'grid' -%}
 
       {%- if include.size == 'sm' -%}
-        <section class="cell cell--12 cell--md-4 cell--lg-3">
-          <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-            <div class="card card--flat">
-              {%- if _article.cover or _article.vid -%}
-                <div class="card__image">
-                  <img class="image" src="{{ _article_cover }}" />
-                  <div class="overlay overlay--bottom">
+        {%- if page.layout == "home" -%}
+          <section class="cell cell--auto">
+        {%- else -%}
+          <section class="cell cell--12 cell--md-4 cell--lg-3">
+        {%- endif -%}
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+              <div class="card card--flat">
+                {%- if _article.cover or _article.vid -%}
+                  <div class="card__image">
+                    <img class="image" src="{{ _article_cover }}" />
+                    <div class="overlay overlay--bottom">
+                      <header>
+                        <a href="{{ _article_url }}"><h5 class="card__header">{{ _article.title }}</h5></a>
+                      </header>
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
+            </li>
+        </section>
+
+      {%- else -%}
+        {%- if page.layout == "home" -%}
+          <section class="cell cell--auto">
+        {%- else -%}
+          <section class="cell cell--12 cell--md-4 cell--lg-3">
+        {%- endif -%}
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+              <div class="card card--flat">
+                {%- if _article.cover or _article.vid -%}
+                  <a href="{{ _article_url }}">
+                    <div class="card__image"><img src="{{ _article_cover }}" /></div>
+                  </a>
+                {%- endif -%}
+                  <div class="card__content">
                     <header>
                       <a href="{{ _article_url }}"><h5 class="card__header">{{ _article.title }}</h5></a>
                     </header>
                   </div>
-                </div>
-              {%- endif -%}
-            </div>
-          </li>
-        </section>
-
-      {%- else -%}
-        <section class="cell cell--12 cell--md-4 cell--lg-3">
-          <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-            <div class="card card--flat">
-              {%- if _article.cover or _article.vid -%}
-                <div class="card__image"><img src="{{ _article_cover }}" /></div>
-              {%- endif -%}
-                <div class="card__content">
-                  <header>
-                    <a href="{{ _article_url }}"><h5 class="card__header">{{ _article.title }}</h5></a>
-                  </header>
-                </div>
-            </div>
-          </li>
+              </div>
+            </li>
         </section>
 
       {%- endif -%}
