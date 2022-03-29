@@ -280,13 +280,21 @@ layout: base
   {
     // Unlike bgRandom, does not need dynamic photos, as staff rarely change
     var photos = [
-      "boko_banner.png",
-      "/authors/arsh_banner.png",
-      "/authors/champ_banner.png",
-      "/authors/electron_banner.png",
-      "/authors/warped_banner.webp"
+      "/assets/images/boko_banner.png",
+      "/assets/images/authors/arsh_banner.png",
+      "/assets/images/authors/aura_banner.png",
+      "https://i.ytimg.com/vi/J--nC12W-YI/maxresdefault.jpg", //blooky
+      "/assets/images/authors/champ_banner.png",
+      "https://thumbs.dreamstime.com/z/missing-person-poster-portrait-format-eps-140110438.jpg", // dash
+      "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg", //eddie
+      "/assets/images/authors/electron_banner.png",
+      "/assets/images/authors/ender_banner.png",
+      "/assets/images/authors/kunfu_banner.gif",
+      "https://images.unsplash.com/photo-1586443327882-6a63805ca1fb", //phoenix
+      "/assets/images/authors/warped_banner.webp",
+      "https://images.unsplash.com/photo-1557683316-973673baf926" //yoshi
     ]
-    var img = "url('/assets/images/" + photos[Math.floor(Math.random() * photos.length)] + "')";
+    var img = "url('" + photos[Math.floor(Math.random() * photos.length)] + "')";
     var page = document.getElementById("page__main-inner");
     page.style.backgroundImage = img;
   }
