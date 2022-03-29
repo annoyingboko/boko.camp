@@ -11,6 +11,8 @@
 
 /.vscode/
 
+/assets/images/authors/.fuse_hidden*
+
 node_modules/
 .sass-cache/
 
