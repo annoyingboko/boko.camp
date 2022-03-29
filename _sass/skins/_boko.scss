@@ -3,14 +3,16 @@
 ///
 
 // main colors
-$main-color-1:     #C31F6C;
+$main-color-1:     #C31F6C; // pink
 $text-color-1:     #FBF1F5;
 
-$main-color-2:     #1FC33D;
+$main-color-2:     #1FC33D; // green
 $text-color-2:     #F0F9F3;
 
-$main-color-3:     rgba(#262DBC, 0.6);
+$main-color-3:     rgba(#262DBC, 0.6); // purple
 $text-color-3:     #F4F2FF;
+
+$logo-color:       $main-color-1;
 
 $highlight-color:  #EDD08D;
 $highlight-decoration: underline;

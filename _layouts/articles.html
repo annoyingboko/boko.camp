@@ -5,8 +5,10 @@ layout: page
 {%- assign _page_articles_data_source = page.articles.data_source | default: layout.articles.data_source -%}
 
 {%- if _page_articles_data_source -%}
-{%- assign _keys = _page_articles_data_source | split: '.' -%}
+  {%- assign _keys = _page_articles_data_source | split: '.' -%}
 {%- endif -%}
+
+{%- assign _title = page.titleimg | default: false -%}
 
 {%- assign _articles = nil -%}
 {%- for _key in _keys -%}
@@ -33,7 +35,11 @@ layout: page
 
 {%- if _articles -%}
 
-  <div class="layout--articles">
+  <div class="layout--articles layout--home-page">
+
+    {%- if page.layout == "home" -%}
+      <div class="article__title">{%- include svg/icon/logo-full.svg -%}</div>
+    {%- endif -%}
 
     {%- if _type == 'grid' -%}
       {%- if page.articles.size == 'sm' -%}

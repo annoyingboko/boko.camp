@@ -6,7 +6,7 @@
   {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
   {%- include snippets/get-nav-url.html path=_paths_root -%}
   <a class="navbar-brand" title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
-    <img src="/assets/images/logo/logo.svg" width="30" height="30" alt="">
+    <div class="header__icon">{%- include svg/icon/logo-icon.svg -%}</div>
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

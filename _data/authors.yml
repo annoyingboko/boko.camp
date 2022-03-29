@@ -40,9 +40,9 @@ BlookyBeat:
   name      : BlookyBeat
   role      : Moderator
   url       : blooky
-  avatar    : https://pbs.twimg.com/profile_images/1427661960489754630/QP3g51Nv_400x400.jpg
-  banner    : https://i.ytimg.com/vi/J--nC12W-YI/maxresdefault.jpg
-  bio       : Mr. Business
+  avatar    : /assets/images/authors/blooky_icon.gif
+  banner    : /assets/images/authors/blooky_banner.png
+  bio       : Mr. Business, Catgirl Extraordinaire
 
 Eddie:
   name      : Eddie

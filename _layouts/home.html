@@ -2,6 +2,7 @@
 layout: articles
 title: Home
 show_title: false
+title: true
 articles:
   data_source: site.posts
   article_type: BlogPosting
@@ -14,8 +15,7 @@ articles:
 <div class="layout--home">
   {%- include paginator.html -%}
 </div>
+{{ content }}
 <script>
   {%- include scripts/home.js -%}
 </script>
-
-{{ content }}

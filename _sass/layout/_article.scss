@@ -27,3 +27,11 @@
     text-align: right;
   }
 }
+.article__title {
+  fill: $highlight-color;
+  padding-bottom: 1rem;
+  svg {
+    width: 40%;
+    height: auto;
+  }
+}
