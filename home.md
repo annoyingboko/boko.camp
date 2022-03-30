@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: non-article
 title: Home
 permalink: /home-raw
 ---
