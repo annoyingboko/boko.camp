@@ -7,7 +7,18 @@ permalink: /about
 
 # About
 
-About info goes here.
+Hi I'm Boko, and I love procrastinating.  
+*Welcome to the place where I put stuff when I actually don't do that for once.*
+
+I'm into all things technology, mainly games, and upload videos to [YouTube](channel), as well as stream on [Twitch](live).
+
+#### My History with YouTube
+
+- About who I am
+- Something about making the website
+- About my youtube channel / stuff online
+- Q/A stuff
+- Reviews
 
 ## Credits
 
