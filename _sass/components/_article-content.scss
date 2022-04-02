@@ -219,3 +219,29 @@
     }
   }
 }
+
+.article__fade {
+  p {
+    color: $text-color-3-d;
+  }
+  td {
+    color: $text-color-3-d;
+  }
+  ul {
+    color: $text-color-3-d;
+  }
+  strong {
+    color: $text-color-3;
+  }
+  em {
+    color: $text-color-3;
+  }
+}
+
+.article__table-no-border {
+  table {
+    td {
+      border: none;
+    }
+  }
+}

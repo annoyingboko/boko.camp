@@ -14,4 +14,19 @@ header:
         url: /archive
 
   - title: About
-    url: /about
+    children:
+
+      - title: Me
+        url: /about
+
+      - title: YouTube
+        url: /youtube-about
+
+      - title: Setup
+        url: /setup
+
+      - title: Credits
+        url: /credits
+
+  - title: Contact
+    url: /contact

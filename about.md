@@ -1,47 +1,46 @@
 ---
-layout: non-article
+layout: about
 title: About
 show_title: false
 permalink: /about
 ---
 
+{%- assign _byear = "July 14, 2002" | date: "%s" -%}
+{%- assign _nyear = "now" | date: "%s" -%}
+{%- assign _years = _nyear | minus: _byear | date: "%y" -%}
+{%- assign _start = 0 | date: "%y" -%}
+{%- assign _age = _years | minus: _start -%}
+
 # About
 
 Hi I'm Boko, and I love procrastinating.  
-*Welcome to the place where I put stuff when I actually don't do that for once.*
+<i>Welcome to the place where I put stuff when I actually don't do that for once.</i>
 
 I'm into all things technology, mainly games, and upload videos to [YouTube](channel), as well as stream on [Twitch](live).
 
-#### My History with YouTube
+### Q & A
 
-- About who I am
-- Something about making the website
-- About my youtube channel / stuff online
-- Q/A stuff
-- Reviews
+##### A bit about you?
+- He/him, Bi, {{_age}} Years Old, from Northern England
+- My favourite colour is either Green or Purple I can never decide lmao
+- Currently studying BEng/BSc in Computer Science
 
-## Credits
+##### What games do you play?
+- I enjoy anything so long as it's good (my opinion is factual)
+- My favourite game of all time was Horizon Zero Dawn, and now is Horizon Forbidden West
+- Some of my other favourites are Genshin Impact, Zelda, Xenoblade, ~~Among Us~~, Hollow Knight, Persona 5, Octopath Traveller and Astral Chain
 
-Below you can find reference to anyone who's helped me or whose work I've used in various aspects of my online presence.
+##### What are your hobbies?
+- Honestly anything involving computers, but some of my favourites include:
+  - Programming
+  - Gaming
+  - Video Editing
+  - Digital Art / Graphic Design
 
-> All credits here will be dated 2022 onward, as it is too hard to correctly ascertain attribution for everything prior to that.  
-> If you believe you should be featured here, don't hesitate to [get in contact]({%- link profiles/boko.md -%}) with me!
+##### What languages do you use?
+- Python, Java and a bit of C#
+- Learning Haskell
+- Bri'ish and Bad Spanish
 
-### This Website
-- [Jekyll](http://jekyllrb.com/) - The SSG (Static Site Generator) used to power this website.
-- [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme) - The Jekyll theme which I used as a base to start from when developing this website.
-- [ElectronDev]({%- link profiles/electron.md -%}) - A great friend who helped a bunch with the site, while developing [his own](https://electrondev.uk/) alongside mine.
-
-### YouTube Channel(s)
-- [ElectronDev]({%- link profiles/electron.md -%}) - Additional aid managing my LIVE channel.
-
-### Twitch Channel
-- [ElectronDev]({%- link profiles/electron.md -%}) - Aid with running the channel, plus the one person consistently always watching the streams lmao.
-
-### Discord Server
-All staff can be seen at the [Staff Page]({%- link staff.md -%})!
-- [ElectronDev]({%- link profiles/electron.md -%}) - Providing aid both as a server administrator, but also on the side of coding AND hosting custom bots for the server.
-- [WarpedGamer]({%- link profiles/warped.md -%}) - Server administrator, plus massive help running the daily questions.
-- **Dash** - Server admin, who although gone for a while, has helped a ton in the past nonetheless and is very much due mention.
-- [Arsh]({%- link profiles/arsh.md -%}) - Great friend, aids in scaring the members into submission merely by existing. Also helps with the daily questions.
-- [Blooky]({%- link profiles/blooky.md -%}) - Also helps out with the questions.
+##### What software / hardware / setup do you use?
+- See my [setup page]({%- link setup.md -%}) for full details!
