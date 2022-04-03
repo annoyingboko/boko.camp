@@ -1,56 +1,125 @@
 RewriteEngine on
 
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# Current form
+RewriteRule ^survey$ form [NC]
+RewriteRule ^form$ usersurvey [NC]
 
-RewriteRule ^home$ index.html [NC]
-RewriteRule ^index$ index.html [NC]
-RewriteRule ^contact$ contact.html [NC]
-RewriteRule ^discord$ discord.html [NC]
-RewriteRule ^patreon$ https://www.patreon.com/AnnoyingBokoblin [NC]
-RewriteRule ^bot$ https://discordapp.com/oauth2/authorize?client_id=583306368518455317&permissions=3072&scope=bot [NC]
-RewriteRule ^mazkoshia$ https://discordapp.com/oauth2/authorize?client_id=583306368518455317&permissions=3072&scope=bot [NC]
-RewriteRule ^server$ https://discord.gg/tR4J9jS [NC]
-RewriteRule ^discord2$ https://discord.gg/tR4J9jS [NC]
-RewriteRule ^discordserver$ https://discord.gg/tR4J9jS [NC]
-RewriteRule ^join$ https://discord.gg/tR4J9jS [NC]
-RewriteRule ^invite$ https://discord.gg/tR4J9jS [NC]
-RewriteRule ^patreon2$ https://www.patreon.com/AnnoyingBokoblin [NC]
-RewriteRule ^support$ https://www.patreon.com/AnnoyingBokoblin [NC]
-RewriteRule ^donate$ https://www.patreon.com/AnnoyingBokoblin [NC]
-RewriteRule ^patron$ https://www.patreon.com/AnnoyingBokoblin [NC]
-RewriteRule ^shop$ https://teespring.com/stores/annoying-bokoblin [NC]
-RewriteRule ^store$ https://teespring.com/stores/annoying-bokoblin [NC]
-RewriteRule ^merch$ https://teespring.com/stores/annoying-bokoblin [NC]
-RewriteRule ^merchandise$ https://teespring.com/stores/annoying-bokoblin [NC]
-RewriteRule ^staff$ staff.html [NC]
-RewriteRule ^moderator$ staff.html [NC]
-RewriteRule ^application$ https://docs.google.com/forms/d/e/1FAIpQLSdb57PHqpbKZX-OPcfGvCQI-NvM31ZnsRzNkjSnQK9nJWfkbQ/viewform?usp=sf_link [NC]
-RewriteRule ^stream$ /twitch [NC]
-RewriteRule ^live$ /stream [NC]
-RewriteRule ^livestream$ /stream [NC]
-RewriteRule ^reddit$ https://www.reddit.com/r/BokoCamp/ [NC]
-RewriteRule ^subreddit$ https://www.reddit.com/r/BokoCamp/ [NC]
-RewriteRule ^twitch$ https://www.twitch.tv/annoyingboko/ [NC]
-RewriteRule ^youtube$ https://www.youtube.com/c/annoyingbokoblin/ [NC]
+# - Socials -
+
+# Youtube Omega
+RewriteRule ^omega$ channel [NC]
+RewriteRule ^main$ channel [NC]
 RewriteRule ^channel$ https://www.youtube.com/c/AnnoyingBokoblin?sub_confirmation=1 [NC]
-RewriteRule ^feedback$ https://docs.google.com/forms/d/e/1FAIpQLSe2-5nz__DBamz7a5VMpt6ygIQrQJCYm9Ek4nxgRKbKJOT88w/viewform?usp=sf_link
-RewriteRule ^forehead$ https://teespring.com/forehead-moment?pid=389 [NC]
 RewriteRule ^member$ https://www.youtube.com/c/AnnoyingBokoblin/join [NC]
-RewriteRule ^friend$ friendcodes.html [NC]
-RewriteRule ^friends$ friendcodes.html [NC]
-RewriteRule ^friendcode$ friendcodes.html [NC]
-RewriteRule ^friendcodes$ friendcodes.html [NC]
-RewriteRule ^livingwith$ https://www.youtube.com/playlist?list=PL1s7-uDbk9j1RZ4X1NE8g8xPL_ncckZEB [NC]
-RewriteRule ^survey$ https://docs.google.com/forms/d/e/1FAIpQLSd-7BEUDrG2P7XbLZlH5VPJZ8JCiumOHjBXHxaBPxbhbE2RPQ/viewform?usp=sf_link [NC]
-RewriteRule ^changelog$ changelog.html [NC]
-RewriteRule ^map$ http://deranged.family:40017/ [NC]
-RewriteRule ^tr$ https://boko.camp/_trigger.html [NC]
-RewriteRule ^trigger https://boko.camp/_trigger.html [NC]
-RewriteRule ^timemachine$ https://youtu.be/dQw4w9WgXcQ [NC]
-RewriteRule ^moyai$ https://docs.google.com/forms/d/e/1FAIpQLSdgvP6qqG4f7a3B5acCq5xjAnCPLC1IPwsZDUzdWr7fMqv-EA/viewform?usp=sf_link [NC]
+
+# Youtube Alpha
+RewriteRule ^second$ channel2 [NC]
+RewriteRule ^boko2$ channel2 [NC]
+RewriteRule ^beta$ channel2 [NC]
+RewriteRule ^youtube2$ channel2 [NC]
+RewriteRule ^two$ channel2 [NC]
 RewriteRule ^channel2$ https://www.youtube.com/channel/UCpiQ1WZ4fE-9akAh0leRy1w [NC]
+
+# TODO: Youtube Beta
+
+# Youtube Theta
+RewriteRule ^theta$ vods [NC]
+RewriteRule ^highlights$ vods [NC]
+RewriteRule ^clip$ vods [NC]
+RewriteRule ^clips$ vods [NC]
+RewriteRule ^vod$ vods [NC]
 RewriteRule ^vods$ https://www.youtube.com/channel/UCI68iV64a9S49dPIvj5Q8IQ [NC]
-RewriteRule ^vod$ /vods [NC]
+
+# Twitch
+RewriteRule ^livestream$ live [NC]
+RewriteRule ^stream$ live [NC]
+RewriteRule ^live$ twitch [NC]
+RewriteRule ^twitch$ https://www.twitch.tv/annoyingboko/ [NC]
+
+# Discord
+RewriteRule ^server$ discord [NC]
+RewriteRule ^discord2$ discord [NC]
+RewriteRule ^discordserver$ discord [NC]
+RewriteRule ^join$ discord [NC]
+RewriteRule ^invite$ discord [NC]
+RewriteRule ^discord$ https://discord.gg/tR4J9jS [NC]
+
+
+# - Give me money -
+
+# Patreon
+RewriteRule ^support$ patreon [NC]
+RewriteRule ^patron$ patreon [NC]
+RewriteRule ^patreon2$ patreon [NC]
+RewriteRule ^patreon$ https://www.patreon.com/AnnoyingBokoblin [NC]
+
+# Tips
+RewriteRule ^donate$ tips [NC]
+RewriteRule ^tip$ tips [NC]
 RewriteRule ^tips*$ https://streamelements.com/annoyingboko/tip [NC]
 
+# Merch
+RewriteRule ^apparel$ merch [NC]
+RewriteRule ^shop$ merch [NC]
+RewriteRule ^store$ merch [NC]
+RewriteRule ^merchandise$ merch [NC]
+RewriteRule ^merch$ https://teespring.com/stores/annoying-bokoblin [NC]
+RewriteRule ^forehead$ https://teespring.com/forehead-moment?pid=389 [NC]
+
+
+# - Discord Server -
+
+# Staff
+RewriteRule ^administration$ staff [NC]
+RewriteRule ^admins$ staff [NC]
+RewriteRule ^mods$ staff [NC]
+RewriteRule ^admin$ staff [NC]
+RewriteRule ^mod$ staff [NC]
+RewriteRule ^moderator$ staff [NC]
+RewriteRule ^staff$ staff.html [NC]
+
+# Mod Form
+RewriteRule ^apply$ application [NC]
+RewriteRule ^application$ https://docs.google.com/forms/d/e/1FAIpQLSdb57PHqpbKZX-OPcfGvCQI-NvM31ZnsRzNkjSnQK9nJWfkbQ/viewform?usp=sf_link [NC]
+
+# Trigger Warnings
+RewriteRule ^tw$ trigger [NC]
+RewriteRule ^tr$ trigger [NC]
+RewriteRule ^triggers$ [NC]
+RewriteRule ^trigger$ https://boko.camp/_trigger.html [NC]
+
+# Other
+RewriteRule ^feedback$ https://docs.google.com/forms/d/e/1FAIpQLSe2-5nz__DBamz7a5VMpt6ygIQrQJCYm9Ek4nxgRKbKJOT88w/viewform?usp=sf_link [NC]
+RewriteRule ^usersurvey$ https://docs.google.com/forms/d/e/1FAIpQLSd-7BEUDrG2P7XbLZlH5VPJZ8JCiumOHjBXHxaBPxbhbE2RPQ/viewform?usp=sf_link [NC]
+
+
+# - Random -
+
+# Surveys
+RewriteRule ^moyaisurvey$ moyai [NC]
+RewriteRule ^moyai$ https://docs.google.com/forms/d/e/1FAIpQLSdgvP6qqG4f7a3B5acCq5xjAnCPLC1IPwsZDUzdWr7fMqv-EA/viewform?usp=sf_link [NC]
+
+# Youtube playlists
+RewriteRule ^livingwith$ https://www.youtube.com/playlist?list=PL1s7-uDbk9j1RZ4X1NE8g8xPL_ncckZEB [NC]
+
+# Bots
+RewriteRule ^bot$ watcher [NC]
+RewriteRule ^watcher$ https://discord.com/api/oauth2/authorize?client_id=699007683587473446&permissions=8&scope=bot%20applications.commands [NC]
+RewriteRule ^changelog$ https://old.boko.camp/changelog.html [NC]
+
+# Switch Friend Codes
+RewriteRule ^friend$ friendcodes [NC]
+RewriteRule ^friends$ friendcodes [NC]
+RewriteRule ^friendcode$ friendcodes [NC]
+RewriteRule ^friendcodes$ https://old.boko.camp/friendcodes.html [NC]
+
+# Minecraft
+RewriteRule ^map$ http://deranged.family:40017/ [NC]
+
+
+# - Error Documents -
 ErrorDocument 404 /404.html
+
+
+# - Rewrite non htmls -
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
