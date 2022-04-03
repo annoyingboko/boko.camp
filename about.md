@@ -44,3 +44,30 @@ I'm into all things technology, mainly games, and upload videos to [YouTube](cha
 
 ##### What software / hardware / setup do you use?
 - See my [setup page]({%- link setup.md -%}) for full details!
+
+### Reviews
+
+See what people have to say about me!
+
+<div>
+  <div class="grid grid--p-3">
+    {%- for _item in site.data.reviews -%}
+
+      <div class="cell cell--12 cell--lg-6">
+        <div class="card" style="background: #0006;">
+          <div class="card__content">
+
+            <p>
+              "{{ _item.content }}"
+            </p>
+            <p style="text-align: right;">
+              <i><b>- {{ _item.author }}</b></i>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    {%- endfor -%}
+  </div>
+</div>
