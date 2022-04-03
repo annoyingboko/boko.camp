@@ -24,3 +24,20 @@ youtube:
         call: Subscribe
         url: /delta
         image: /assets/images/links/youtube_theta.svg
+
+socials:
+
+  - name: Contact Me
+    image: /assets/images/links/youtube_omega.svg
+    colour: C31F6C
+    items:
+
+      - name: Discord
+        call: Join
+        url: /server
+        image: /assets/images/links/discord.png
+
+      - name: Email Me
+        call: Write
+        url: mailto:boko@boko.camp
+        image: /assets/images/links/mail.svg
