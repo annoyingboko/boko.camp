@@ -2,20 +2,25 @@ youtube:
 
   - name: YouTube
     image: /assets/images/links/youtube.svg
+    colour: C31F6C
     items:
 
       - name: Boko
+        call: Subscribe
         url: /channel
         image: /assets/images/links/youtube_omega.svg
 
       - name: Boko Alpha
+        call: Subscribe
         url: /alpha
         image: /assets/images/links/youtube_alpha.svg
 
       - name: Boko Beta
+        call: Subscribe
         url: /beta
         image: /assets/images/links/youtube_beta.svg
 
       - name: Boko Theta
+        call: Subscribe
         url: /delta
         image: /assets/images/links/youtube_theta.svg

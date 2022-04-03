@@ -11,22 +11,26 @@ footer: false
     text-align: center;
     background: #0004;
     border-radius: 0.5rem;
-    padding: 2rem;
-    max-width: 22rem;
+    padding: 1rem;
+    max-width: 20rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .content h1 {
     border: none;
     padding: none;
   }
   .card {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.5rem;
     padding: 1rem;
     background: #0004;
     box-shadow: none;
+  }
+  .card__title {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
   }
 </style>
 
@@ -40,23 +44,24 @@ footer: false
     </div>
   </div>
 
-  <br>
-
   {%- for _item in _linkset.items -%}
-    <div class="card" style="text-align: left;">
+    <div class="card" style="text-align: right;">
 
       <a href="{{ _item.url }}">
       <div class="grid">
-        <div class="cell cell--4">
+        <div class="cell cell--3">
           <img class="image" src="{{ _item.image }}"/>
         </div>
-        <div class="cell cell--auto" style="margin: 7px; margin-left: 1.5rem;">
-          <h3>{{ _item.name }}</h3>
+        <div class="cell cell--auto"></div>
+        <div class="cell cell--shrink card__title">
+          <h4 style="margin: 2px;">{{ _item.name }}</h4>
+          <div class="button button--rounded" style="margin: 2px; background: #{{ _linkset.colour }};">
+            {{ _item.call | capitalize }}
+          </div>
         </div>
       </div>
       </a>
 
     </div>
-    <br>
   {%- endfor -%}
 </div>
