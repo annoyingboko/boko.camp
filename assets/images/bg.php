@@ -1,8 +1,9 @@
 <?php
-$path_photos = "/var/www/boko_camp/assets/images/photos";
+$path_photos = "assets/images/photos";
 $images = array();
-function getFilesIn($directory)
+function getFilesIn($dir)
 {
+       $directory = "/var/www/boko_camp/" . $dir;
        foreach (new DirectoryIterator($directory) as $file) {
               if ($file->isDot())
               {
@@ -15,7 +16,7 @@ function getFilesIn($directory)
                      }
                      else{
                             global $images, $path;
-                            $images[] = str_ireplace($path, "", ($directory . "/" .  $file->getFilename()));
+                            $images[] = str_ireplace($path, "", ($dir . "/" .  $file->getFilename()));
                      }
               }
        }
