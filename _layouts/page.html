@@ -28,6 +28,11 @@ layout: base
 {%- assign _comment = __return -%}
 
 
+{%- if page.cover -%}
+  {%- assign _bg_img = page.cover -%}
+{%- endif -%}
+
+
 {%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
 {%- if page.sidebar -%}

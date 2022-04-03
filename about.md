@@ -53,7 +53,13 @@ See what people have to say about me!
   <div class="grid grid--p-3">
     {%- for _item in site.data.reviews -%}
 
-      <div class="cell cell--12 cell--lg-6">
+      {%- if _item.cardsize -%}
+        {%- assign _size = _item.cardsize -%}
+      {%- else -%}
+        {%- assign _size = 6 -%}
+      {%- endif -%}
+
+      <div class="cell cell--12 cell--lg-{{_size}}">
         <div class="card" style="background: #0006;">
           <div class="card__content">
 

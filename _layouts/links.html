@@ -1,0 +1,62 @@
+---
+layout: non-article
+header: false
+footer: false
+---
+
+{%- assign _linkset = site.data.links[page.dat][0] -%}
+
+<style>
+  .content {
+    text-align: center;
+    background: #0004;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .content h1 {
+    border: none;
+    padding: none;
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background: #0004;
+    box-shadow: none;
+  }
+</style>
+
+<div class="content">
+  <div class="card">
+    <div class="card__image">
+      <img class="image" src="{{ _linkset.image }}"/>
+      <div class="overlay overlay--bottom">
+        <h1>{{ _linkset.name }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  {%- for _item in _linkset.items -%}
+    <div class="card" style="text-align: left;">
+
+      <a href="{{ _item.url }}">
+      <div class="grid">
+        <div class="cell cell--4">
+          <img class="image" src="{{ _item.image }}"/>
+        </div>
+        <div class="cell cell--auto" style="margin: 7px;">
+          <h3>{{ _item.name }}</h3>
+        </div>
+      </div>
+      </a>
+
+    </div>
+    <br>
+  {%- endfor -%}
+</div>

@@ -1,0 +1,21 @@
+youtube:
+
+  - name: YouTube
+    image: https://cdn.exclaimer.com/Handbook%20Images/youtube-icon_square_128x128.png
+    items:
+
+      - name: Boko
+        url: /channel
+        image: /assets/images/boko_icon.png
+
+      - name: Boko Alpha
+        url: /alpha
+        image: /assets/images/boko_icon.png
+
+      - name: Boko Beta
+        url: /beta
+        image: /assets/images/boko_icon.png
+
+      - name: Boko Delta
+        url: /delta
+        image: /assets/images/boko_icon.png
