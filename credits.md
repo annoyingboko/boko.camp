@@ -10,7 +10,7 @@ permalink: /credits
 Below you can find reference to anyone who's helped me or whose work I've used in various aspects of my online presence.
 
 > All credits here will be dated 2022 onward, as it is too hard to correctly ascertain attribution for everything prior to that.  
-> If you believe you should be featured here, don't hesitate to [get in contact]({%- link profiles/boko.md -%}) with me!
+> If you believe you should be featured here, don't hesitate to [get in contact]({%- link contact.md -%}) with me!
 
 ### This Website
 - [Jekyll](http://jekyllrb.com/) - The SSG (Static Site Generator) used to power this website.

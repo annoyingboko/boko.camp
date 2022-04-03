@@ -5,19 +5,58 @@ show_title: false
 permalink: /setup
 ---
 
-# About
+<style>
+  .card__title-img {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 3.5px;
+    margin-right: 0.2rem;
+  }
+</style>
 
-Hi I'm Boko, and I love procrastinating.  
-<i>Welcome to the place where I put stuff when I actually don't do that for once.</i>
+# My Setup
 
-I'm into all things technology, mainly games, and upload videos to [YouTube](channel), as well as stream on [Twitch](live).
+On this here page, you can find listed all the different software, hardware, or anything in-between I use for various works.
 
-### Q & A
+> If anything isn't listed here feel free to [get in contact]({%- link contact.md -%}) and I'll add it!
 
-##### What games do you play?
-- I enjoy anything so long as it's good (my opinion is factual).
-- My favourite game of all time was Horizon Zero Dawn, and now is Horizon Forbidden West.
-- Some of my other favourites are Genshin Impact, Zelda, Xenoblade, ~~Among Us~~, Hollow Knight, Persona 5, Octopath Traveller and Astral Chain.
+<div>
+  {%- for _setup in site.data.setup.setups -%}
+    <h3>{{ _setup.title }}</h3>
+    <p>{{ _setup.desc }}</p>
 
-##### What software / hardware / setup do you use?
-- See my [setup]({%- link setup.md -%}) page for full details!
+    <div class="grid grid--p-3">
+      {%- for _item in _setup.items -%}
+
+        {%- if _item.cardsize -%}
+          {%- assign _size = _item.cardsize -%}
+        {%- else -%}
+          {%- assign _size = 'auto' -%}
+        {%- endif -%}
+
+        <div class="cell cell--12 cell--lg-{{ _size }}">
+          <div class="card" style="background: #{{ _item.colour }};">
+            <div class="card__content">
+
+              <div class="card__header">
+                <h4>
+                  <a href="{{ _item.url }}">
+                    <img class="image card__title-img" src="{{ _item.image }}"/>
+                    {{ _item.name }}
+                  </a>
+                </h4>
+              </div>
+
+              <p>
+                {{ _item.desc }}
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      {%- endfor -%}
+    </div>
+
+  {%- endfor -%}
+</div>

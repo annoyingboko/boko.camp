@@ -1,0 +1,123 @@
+setups:
+
+  - title: Video Production
+    desc: Everything I use for putting together my YouTube videos.
+    items:
+
+      - name: After Effects
+        url: https://www.adobe.com/products/aftereffects.html
+        image: https://www.adobe.com/content/dam/cc/us/en/products/ccoverview/ae_cc_app_RGB.svg
+        colour: 00005B88
+        desc: I use After Effects for creating complex animations and effects in my videos.
+
+      - name: Premiere
+        url: https://www.adobe.com/products/premiere.html
+        image: https://www.adobe.com/content/dam/cct/creativecloud/business/teams/free-trial-new/desktop_premiere.svg
+        colour: 00005B88
+        desc: I use Premiere for putting together all of the final pieces to make one video.
+
+      - name: Audacity
+        url: https://www.audacityteam.org/
+        image: https://www.audacityteam.org/wp-content/themes/wp_audacity/img/logo.png
+        colour: 0000EB66
+        desc: I use Audacity for recording and editing my voice, plus other sound stuff needed.
+
+      - name: EOS 250d
+        url: https://www.canon.co.uk/cameras/eos-250d/
+        image: https://cdn.iconscout.com/icon/free/png-256/canon-1863563-1579771.png
+        colour: 7F1920BB
+        desc: I film using the Canon EOS 250d, with the <a href="https://www.canon.co.uk/lenses/ef-s-18-55mm-f-4-5-6-is-stm/">EF-S 18-55mm</a> and <a href="https://www.canon.co.uk/lenses/ef-50mm-f-1-8-stm-lens/">EF 50mm</a> lenses.
+
+  - title: Streaming
+    desc: The setup I have going for my livestreams.
+    items:
+
+      - name: OBS
+        url: https://obsproject.com/
+        image: https://raw.githubusercontent.com/obsproject/obs-studio/e8409669688e2c4566ae07545ba6127bd1d377e9/UI/forms/images/obs.png
+        colour: 00000088
+        desc: I use OBS for organising my streams into different complex scenes which I can switch between live.
+
+      - name: BRIO 4K
+        url: https://www.logitech.com/en-gb/products/webcams/brio-4k-hdr-webcam.960-001106.html
+        image: https://cdn.iconscout.com/icon/free/png-256/logitech-2-283647.png
+        colour: 009C8688
+        desc: I use the logitech BRIO 4k webcam when streaming, in combination with a random keylight I was gifted.
+
+  - title: Graphics
+    desc: What I use for graphic design / art.
+    items:
+
+      - name: paint.NET
+        url: https://www.getpaint.net/
+        image: https://avatars.githubusercontent.com/u/11067286
+        colour: 3567BA88
+        desc: I use paint.NET whenever I need to do quick edits to bitmap images.
+        cardsize: 4
+
+      - name: GIMP
+        url: https://www.gimp.org/
+        image: https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg
+        colour: 7C735C88
+        desc: I use gimp when on linux and therefore unable to use paint.NET :(
+        cardsize: 4
+
+      - name: Inkscape
+        url: https://inkscape.org/
+        image: https://media.inkscape.org/static/images/inkscape-logo.svg
+        colour: 00000088
+        desc: I use Inkscape for creating vector images and youtube thumbnails.
+        cardsize: 4
+
+      - name: Krita
+        url: https://krita.org/en/
+        image: https://upload.wikimedia.org/wikipedia/commons/7/73/Calligrakrita-base.svg
+        colour: FF42ED88
+        desc: I use Krita for drawing digital art both for videos or just fun with my graphics tablet.
+        cardsize: 6
+
+      - name: Artist12 Pro
+        url: https://www.xp-pen.com/product/479.html
+        image: https://static.wikia.nocookie.net/logopedia/images/c/ce/XP-Pen_icon_2.png
+        colour: 92C42F88
+        desc: I use the XP-PEN Arist12 Pro graphics tablet for drawing digital art as well as prototyping branding.
+        cardsize: 6
+
+  - title: Hardware
+    desc: The components and devices I use to do just about everything.
+    items:
+
+      - name: 4K60 Pro
+        url: https://www.elgato.com/en/game-capture-4k60-pro
+        image: https://www.elgato.com/themes/custom/smalcode/v19-img/general/navigation/black/elgato_logo_icon-black.png
+        colour: 0F1C7C88
+        desc: I hate elgato I cannot use a device I paid £200 for because they are too lazy to release linux drivers fuck them fucking stupid idiots.
+        cardsize: 6
+
+      - name: Stream Deck
+        url: https://www.elgato.com/en/stream-deck
+        image: https://www.elgato.com/themes/custom/smalcode/v19-img/general/navigation/black/elgato_logo_icon-black.png
+        colour: 0F1C7C88
+        desc: I use my Stream Deck to greatly increase my productivity, especially during streams, for a better experience.
+        cardsize: 6
+
+      - name: ATH-SR30BT
+        url: https://www.audio-technica.com/en-us/headphones/type/wireless/ath-sr30bt
+        image: https://cdn.iconscout.com/icon/free/png-256/audio-tecnica-3215368-2673786.png
+        colour: 00000088
+        desc: Using bluetooth headphones allows for easier streaming, and just production, as I can move and walk around freely.
+        cardsize: 6
+
+      - name: AT2020USB+
+        url: https://www.audio-technica.com/en-us/microphones/wired/type/usb/at2020usb
+        image: https://cdn.iconscout.com/icon/free/png-256/audio-tecnica-3215368-2673786.png
+        colour: 00000088
+        desc: Having a high quality microphone is key, for making sure that both videos and streams are an enjoyable experience.
+        cardsize: 6
+
+      - name: RTX 3070
+        url: https://www.nvidia.com/en-gb/geforce/graphics-cards/30-series/rtx-3070-3070ti/
+        image: https://cdn.iconscout.com/icon/free/png-256/nvidia-282591.png
+        colour: 76b90088
+        desc: I was told to flex this.
+        cardsize: 12
