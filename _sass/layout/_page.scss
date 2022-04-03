@@ -41,6 +41,7 @@ html,
   background-color: $background-color;
   background-image: url("/assets/white.png");
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   transition: background-image 0.5s linear;
   transition-delay: 0.5s;

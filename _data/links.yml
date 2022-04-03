@@ -1,21 +1,21 @@
 youtube:
 
   - name: YouTube
-    image: https://cdn.exclaimer.com/Handbook%20Images/youtube-icon_square_128x128.png
+    image: /assets/images/links/youtube.svg
     items:
 
       - name: Boko
         url: /channel
-        image: /assets/images/boko_icon.png
+        image: /assets/images/links/youtube_omega.svg
 
       - name: Boko Alpha
         url: /alpha
-        image: /assets/images/boko_icon.png
+        image: /assets/images/links/youtube_alpha.svg
 
       - name: Boko Beta
         url: /beta
-        image: /assets/images/boko_icon.png
+        image: /assets/images/links/youtube_beta.svg
 
-      - name: Boko Delta
+      - name: Boko Theta
         url: /delta
-        image: /assets/images/boko_icon.png
+        image: /assets/images/links/youtube_theta.svg
