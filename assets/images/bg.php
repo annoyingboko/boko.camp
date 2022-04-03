@@ -1,10 +1,6 @@
 <?php
-<<<<<<< HEAD
 $path = "/var/www/boko_camp";
 $path_photos = "/var/www/boko_camp/assets/images/photos";
-=======
-$path_photos = "assets/images/photos";
->>>>>>> bcebae69eb2110a2c929b7894576161897c006f5
 $images = array();
 function getFilesIn($dir)
 {
