@@ -8,6 +8,9 @@ header:
       - title: Videos
         url: /videos
 
+      - title: Photos
+        url: /photos
+
       - divider: true
 
       - title: Archive
