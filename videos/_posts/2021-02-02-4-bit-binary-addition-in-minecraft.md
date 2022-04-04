@@ -4,7 +4,7 @@ vid: uzwCtQLe0fQ
 title: 4-Bit Binary Addition in Minecraft
 permalink: mc-binary-adder
 tags: Short Gaming Computing
-categories: videos featured
+categories: videos
 aside: false
 ---
 

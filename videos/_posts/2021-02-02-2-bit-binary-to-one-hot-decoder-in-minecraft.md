@@ -4,7 +4,7 @@ vid: 53wOHLVDIqw
 title: 2-Bit Binary to One-Hot Decoder in Minecraft
 permalink: mc-one-hot-decoder
 tags: Short Gaming Computing
-categories: videos featured
+categories: videos
 aside: false
 ---
 
