@@ -3,6 +3,7 @@ layout: about
 title: Credits
 show_title: false
 permalink: /credits
+excerpt: Here you can find reference to anyone who has helped me or whose work I've used in various aspects of my online presence.
 ---
 
 ## Credits

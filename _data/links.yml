@@ -1,7 +1,7 @@
 youtube:
 
   - name: YouTube
-    image: /assets/images/links/youtube.svg
+    image: /assets/images/links/youtube.jpg
     colour: C31F6C
     items:
 
@@ -22,13 +22,13 @@ youtube:
 
       - name: Boko Theta
         call: Subscribe
-        url: /delta
+        url: /theta
         image: /assets/images/links/youtube_theta.svg
 
 socials:
 
   - name: Contact Me
-    image: /assets/images/links/youtube_omega.svg
+    image: /assets/images/links/youtube_omega.webp
     colour: C31F6C
     items:
 

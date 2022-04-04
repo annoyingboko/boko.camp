@@ -15,7 +15,7 @@ RewriteRule ^member$ https://www.youtube.com/c/AnnoyingBokoblin/join [NC]
 # Youtube Alpha
 RewriteRule ^second$ channel2 [NC]
 RewriteRule ^boko2$ channel2 [NC]
-RewriteRule ^beta$ channel2 [NC]
+RewriteRule ^alpha$ channel2 [NC]
 RewriteRule ^youtube2$ channel2 [NC]
 RewriteRule ^two$ channel2 [NC]
 RewriteRule ^channel2$ https://www.youtube.com/channel/UCpiQ1WZ4fE-9akAh0leRy1w [NC]

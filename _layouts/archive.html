@@ -9,7 +9,7 @@ layout: page
   {%- assign _type = 'brief' -%}
 {%- endif -%}
 
-{%- assign _desc = page.description -%}
+{%- assign _desc = page.excerpt -%}
 
 {%- if page.post_category -%}
   {%- assign _posts = site.posts | where: "categories", page.post_category -%}

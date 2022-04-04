@@ -3,6 +3,7 @@ layout: about
 title: About YouTube
 show_title: false
 permalink: /youtube-about
+excerpt: I upload content to YouTube as and when I feel like it to a variety of channels, feel free to check them out!
 ---
 
 <style>

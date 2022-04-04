@@ -1,5 +1,7 @@
 ---
 layout: links
 dat: youtube
-cover: /assets/images/links/youtube.svg
+title: YouTube
+cover: /assets/images/links/youtube.jpg
+excerpt: Boko on YouTube.
 ---

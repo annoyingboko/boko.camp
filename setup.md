@@ -3,6 +3,7 @@ layout: about
 title: Setup
 show_title: false
 permalink: /setup
+excerpt: On this here page, you can find listed all the different software, hardware, or anything in-between I use for various works.
 ---
 
 <style>

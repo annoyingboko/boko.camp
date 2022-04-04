@@ -1,5 +1,6 @@
 ---
 layout: staff
+excerpt: Official list of all members of staff from the Boko Camp Discord Server.
 ---
 
 ## Server Staff

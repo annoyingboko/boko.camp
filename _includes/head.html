@@ -2,17 +2,82 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-{%- include snippets/get-article-title.html article=page -%}
-<title>
-  {%- if __return and page.layout != "home" -%}
-    {{ __return }} - {{ site.title }}
-  {%- else -%}
-    {{ site.title }}
-  {%- endif -%}
-</title>
+<meta name="keywords" content="youtube, twitch, blog, personal, project, video, photography, art">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
 
-<meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
-<link rel="canonical" href="{%- include snippets/page-url.html -%}">
+{%- include snippets/get-article-title.html article=page -%}
+{%- if page.layout == "profile" -%}
+  {%- assign _title = site.data.authors[page.author].name -%}
+{%- elsif __return and page.layout != "home" -%}
+  {%- assign _title =  __return | append: " - " | append: site.title -%}
+{%- else -%}
+  {%- assign _title = site.title -%}
+{%- endif -%}
+
+{%- if page.excerpt -%}
+  {%- assign _desc = page.excerpt | strip_html | strip_newlines | strip | truncate: 160 -%}
+{%- elsif page.layout == "profile" -%}
+  {%- assign _desc = site.data.authors[page.author].bio -%}
+{%- elsif page.content and page.layout != 'home' -%}
+  {%- assign _desc = page.content | strip_html | strip_newlines | strip | truncate: 160 -%}
+{%- else -%}
+  {%- assign _desc = site.description -%}
+{%- endif -%}
+
+{%- if page.vid -%}
+  {%- assign _img = "https://img.youtube.com/vi/" | append: page.vid | append: "/maxresdefault.jpg" -%}
+{%- elsif page.layout == "profile" -%}
+  {%- assign _img = site.url | append: site.data.authors[page.author].avatar -%}
+{%- elsif page.layout == "links" -%}
+  {%- assign _img = site.url | append: site.data.links[page.dat][0].image -%}
+{%- elsif page.cover -%}
+  {%- assign _img = site.url | append: page.cover -%}
+{%- else -%}
+  {%- assign _img = site.url | append: '/assets/favicon.ico' -%}
+{%- endif -%}
+
+<!-- title -->
+<title>{{ _title }}</title>
+<meta property='og:title'  content="{{ _title }}">
+<meta name='twitter:title' content="{{ _title }}">
+
+<!-- description -->
+<meta name='description'         content="{{ _desc }}">
+<meta property='og:description'  content="{{ _desc }}">
+<meta name='twitter:description' content="{{ _desc }}">
+
+<!-- image -->
+<meta property="og:image"  content="{{ _img }}">
+<meta name="twitter:image" content="{{ _img }}">
+
+<!-- url -->
+<link rel='canonical'       href="{%- include snippets/page-url.html -%}">
+<meta property='og:url'  content="{%- include snippets/page-url.html -%}">
+<meta name='twitter:url' content="{%- include snippets/page-url.html -%}">
+
+<!-- video -->
+{%- if page.vid -%}
+  <meta property="og:type" content="video.other">
+  <meta property="og:video:url" content="https://www.youtube.com/embed/{{ page.vid }}">
+  <meta property="og:video:secure_url" content="https://www.youtube.com/embed/{{ page.vid }}">
+  <meta property="og:video:type" content="text/html">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+
+  <meta name="twitter:card" content="player">
+  <meta name="twitter:site" content="@youtube">
+  <meta name="twitter:player" content="https://www.youtube.com/embed/{{ page.vid }}">
+  <meta name="twitter:player:width" content="1280">
+  <meta name="twitter:player:height" content="720">
+
+  <div id="watch7-content" class="watch-main-col" itemscope itemid="" itemtype="http://schema.org/VideoObject">
+    <link itemprop="embedUrl" href="https://www.youtube.com/embed/{{ page.vid }}">
+    <meta itemprop="playerType" content="HTML5 Flash">
+    <meta itemprop="width" content="1280">
+    <meta itemprop="height" content="720">
+  </div>
+{%- endif -%}
 
 {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
 {%- include snippets/get-nav-url.html path=_paths_rss -%}

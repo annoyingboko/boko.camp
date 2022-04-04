@@ -3,6 +3,7 @@ layout: about
 title: About
 show_title: false
 permalink: /about
+excerpt: Hi I'm Boko, and I love procrastinating. Welcome to the place where I put stuff when I actually don't do that for once.
 ---
 
 {%- assign _byear = "July 14, 2002" | date: "%s" -%}
