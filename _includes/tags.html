@@ -27,7 +27,11 @@
       </button>
     </li>
     {%- for _tag in _tags -%}
-      {%- assign _tagfilt = _tag[1] | where: "categories", page.post_category -%}
+      {%- if page.post_category -%}
+        {%- assign _tagfilt = _tag[1] | where: "categories", page.post_category -%}
+      {%- else -%}
+        {%- assign _tagfilt = _tag[1] -%}
+      {%- endif -%}
       {%- if _tagfilt.size > 0 -%}
         {%- assign _tag_cur_size = _tag[1].size -%}
         {%- assign _tag_min_1 = _tag_min_size -%}
