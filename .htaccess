@@ -20,7 +20,10 @@ RewriteRule ^youtube2$ channel2 [NC]
 RewriteRule ^two$ channel2 [NC]
 RewriteRule ^channel2$ https://www.youtube.com/channel/UCpiQ1WZ4fE-9akAh0leRy1w [NC]
 
-# TODO: Youtube Beta
+# Youtube Beta
+RewriteRule ^workinprogress$ [NC]
+RewriteRule ^wip$ beta [NC]
+RewriteRule ^beta$ https://www.youtube.com/channel/UCE_py8sGbWZjph2fqA2qGRQ [NC]
 
 # Youtube Theta
 RewriteRule ^theta$ vods [NC]
