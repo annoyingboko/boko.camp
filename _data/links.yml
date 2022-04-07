@@ -8,22 +8,22 @@ youtube:
       - name: Boko
         call: Subscribe
         url: /channel
-        image: /assets/images/links/youtube_omega.svg
+        image: /assets/images/links/youtube_omega.webp
 
-      - name: Boko Alpha
+      - name: Boko-α
         call: Subscribe
         url: /alpha
-        image: /assets/images/links/youtube_alpha.svg
+        image: /assets/images/boko_icon.png
 
-      - name: Boko Beta
+      - name: βoko
         call: Subscribe
         url: /beta
-        image: /assets/images/links/youtube_beta.svg
+        image: /assets/images/links/youtube_beta.webp
 
-      - name: Boko Theta
+      - name: Boko-Θ
         call: Subscribe
         url: /theta
-        image: /assets/images/links/youtube_theta.svg
+        image: /assets/images/links/youtube_theta.webp
 
 socials:
 
