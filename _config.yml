@@ -180,6 +180,9 @@ markdown    : kramdown
 highlighter : rouge
 permalink   : date
 
+include:
+  - _trigger.html
+
 exclude:
   - CHANGELOG.md
   - HOW_TO_RELEASE.md
