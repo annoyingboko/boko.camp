@@ -4,17 +4,11 @@ setups:
     desc: Everything I use for putting together my YouTube videos.
     items:
 
-      - name: After Effects
-        url: https://www.adobe.com/products/aftereffects.html
-        image: https://www.adobe.com/content/dam/cc/us/en/products/ccoverview/ae_cc_app_RGB.svg
-        colour: 00005B88
-        desc: I use After Effects for creating complex animations and effects in my videos.
-
-      - name: Premiere
-        url: https://www.adobe.com/products/premiere.html
-        image: https://www.adobe.com/content/dam/cct/creativecloud/business/teams/free-trial-new/desktop_premiere.svg
-        colour: 00005B88
-        desc: I use Premiere for putting together all of the final pieces to make one video.
+      - name: Resolve
+        url: https://www.blackmagicdesign.com/products/davinciresolve/
+        image: https://upload.wikimedia.org/wikipedia/commons/9/90/DaVinci_Resolve_17_logo.svg
+        colour: e02d3588
+        desc: I DaVinci Resolve for editing my videos together, as of April 2022!
 
       - name: Audacity
         url: https://www.audacityteam.org/
