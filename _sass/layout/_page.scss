@@ -8,6 +8,9 @@ html,
 
 .custom-scrollbar {
   overflow: overlay;
+  .navbar {
+    margin-right: 10px;
+  }
 }
 
 ::-webkit-scrollbar {
