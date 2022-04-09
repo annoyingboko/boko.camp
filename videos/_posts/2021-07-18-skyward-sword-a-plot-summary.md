@@ -3,7 +3,7 @@ layout: video
 vid: udeHM4HlyN4
 title: Skyward Sword, a Plot Summary
 permalink: ss-plot-summary
-tags: Video Gaming Zelda
+tags: Gaming Zelda
 categories: videos featured
 aside: false
 ---
@@ -67,10 +67,10 @@ the end
 
 ### Video Credits
 - **Boko** - Production
-- **arsh** - Creative Assistance
-- **ElectronDev** - Moral Advisor
-- **Infin** - Ghirahim Assistance
-- **WarpedGamer** - @foodfromgian
+- **[arsh](%- link profiles/arsh.md -%)** - Creative Assistance
+- **[ElectronDev](%- link profiles/electron.md -%)** - Moral Advisor
+- **[Infin](https://www.youtube.com/channel/UCPGzAE_H9aeTPj9KZTE9Flw)** - Ghirahim Assistance
+- **[WarpedGamer](%- link profiles/warped.md -%)** - @foodfromgian
 
 #### Music Credits
 - Our Inspiring Corporate  -  [https://youtu.be/uNK_9fOOBTM](https://youtu.be/uNK_9fOOBTM)
