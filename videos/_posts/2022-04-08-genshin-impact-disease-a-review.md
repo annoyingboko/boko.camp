@@ -1,6 +1,6 @@
 ---
 layout: video
-vid: rWlDf2Pi7qw
+vid: APzOFFAQ1gQ 
 title: Genshin Impact Disease A Review
 permalink: genshin-disease-review
 tags: Gaming Genshin
