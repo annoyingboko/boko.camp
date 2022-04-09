@@ -4,6 +4,10 @@ title: Home
 permalink: /home-raw
 ---
 
+*__NOTICE:__ This site is currently still in progress, and may seem unrefined or have long load times. It is being worked on.*
+
+<hr>
+
 Hey there, I'm **Boko** and welcome to my site!  
 This website is a creative outlet for me and the hub of basically anything I make.
 

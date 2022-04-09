@@ -40,16 +40,31 @@ html,
   min-height: 100%;
   background-color: $background-color;
   background-image: url("/assets/white.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  //background-size: cover;
+  background-size: 100vw;
+  //background-position: center;
+  //background-attachment: fixed;
   transition: background-image 0.5s linear;
   transition-delay: 0.5s;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A998EA88;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #00000022;
+  }
 }
 
 .page__main-inner-overlay {
   background-image: $background-gradient;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   backdrop-filter: blur(2px);
  -webkit-backdrop-filter: blur(2px);
   min-height: 100vh;
