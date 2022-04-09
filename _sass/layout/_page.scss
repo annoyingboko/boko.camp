@@ -6,6 +6,24 @@ html,
   @extend .text--dark;
 }
 
+.custom-scrollbar {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A998EA88;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #00000022;
+}
+
 .layout--page {
   &.layout--page--sidebar {
     .page__viewport,
@@ -46,20 +64,6 @@ html,
   //background-attachment: fixed;
   transition: background-image 0.5s linear;
   transition-delay: 0.5s;
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #A998EA88;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #00000022;
-  }
 }
 
 .page__main-inner-overlay {
