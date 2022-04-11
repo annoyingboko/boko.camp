@@ -72,7 +72,7 @@ layout: base
     {%- endif -%}
     <div class="{{ _page_main_class }} cell cell--auto">
 
-      <div class="page__main-inner" id="page__main-inner">
+      <div class="page__main-inner" id="page__main-inner" onresize="pageResize">
       {%- if _page_type == 'article' -%}
         {%- if page.vid -%}
           {%- capture _bg_img -%}
@@ -290,6 +290,8 @@ layout: base
         var img = "url('" + this.responseText; + "')";
         var page = document.getElementById("page__main-inner");
         page.style.backgroundImage = img;
+        window.bgHeight = window.innerHeight * 1.2;
+        sectionWindowSize()
       }
     };
     xmlhttp.open("GET", "https://boko.camp/assets/images/bg.php", true);
@@ -316,12 +318,16 @@ layout: base
     var img = "url('" + photos[Math.floor(Math.random() * photos.length)] + "')";
     var page = document.getElementById("page__main-inner");
     page.style.backgroundImage = img;
+    window.bgHeight = window.innerHeight * 1.2;
+    sectionWindowSize()
   }
   function bgSet()
   {
     var img = "url('" + window.BACKGROUND_IMAGE + "')";
     var page = document.getElementById("page__main-inner");
     page.style.backgroundImage = img;
+    window.bgHeight = window.innerHeight * 1.2;
+    sectionWindowSize()
   }
 
   {%- if _bg_img -%}
@@ -331,6 +337,14 @@ layout: base
   {%- else -%}
     window.onload = bgRandom;
   {%- endif -%}
+</script>
+<script>
+  function sectionWindowSize() {
+    var page = document.getElementById("page__main-inner");
+    page.style.backgroundSize = "auto " + window.bgHeight.toString() + "px";
+    console.log(window.bgHeight);
+  }
+  window.onresize = setWindowSize;
 </script>
 <script>
   {%- include scripts/lib/scroll-to.js -%}
