@@ -72,7 +72,13 @@
   <meta name="twitter:player:height" content="720">
 
   <div id="watch7-content" class="watch-main-col" itemscope itemid="" itemtype="http://schema.org/VideoObject">
+    <meta itemprop="name" content="{{ _title }}">
+    <meta itemprop="description" content="{{ _desc }}">
+    <meta itemprop="uploadDate" content='{{ page.date | date: "%Y-%m-%d"}}'>
+
     <link itemprop="embedUrl" href="https://www.youtube.com/embed/{{ page.vid }}">
+    <link itemprop="thumbnailUrl" href="{{ _img }}">
+
     <meta itemprop="playerType" content="HTML5 Flash">
     <meta itemprop="width" content="1280">
     <meta itemprop="height" content="720">
