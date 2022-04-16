@@ -37,6 +37,7 @@ I'll definitely be including more of the skits to come, plus maybe even ramping 
 
 ### Video Credits
 - **Boko** - Production
+- **[ElectronDev]({%- link profiles/electron.md -%})** - Toilet Roll
 
 #### Music Credits
 - Electronics Store - **Persona 5**
